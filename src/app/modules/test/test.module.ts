@@ -1,17 +1,17 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {TestComponent} from './components/test.component';
 import {TestRoutingModule} from './test-routing.module';
-import {AppComponent} from '../../app.component';
+import { NewsComponent } from './components/news/news.component';
+import { ShopComponent } from './components/shop/shop.component';
 
 @NgModule ({
   declarations: [
-    TestComponent
+    NewsComponent,
+    ShopComponent
   ],
   imports: [
     CommonModule,
     TestRoutingModule
   ],
-  bootstrap: [TestComponent]
 })
 export class TestModule {}
