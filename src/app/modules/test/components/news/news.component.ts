@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DataService} from '../../../../services/data.service';
 
 @Component({
   selector: 'app-news',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./news.component.scss']
 })
 export class NewsComponent implements OnInit {
+  cars: string[] = [];
 
-  constructor() { }
+  constructor(private dataService: DataService) {}
 
   ngOnInit() {
+    this.cars = this.dataService.getData();
   }
-
 }

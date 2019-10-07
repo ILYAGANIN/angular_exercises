@@ -3,17 +3,20 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import {DataService} from './services/data.service';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [DataService],
+  exports: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
