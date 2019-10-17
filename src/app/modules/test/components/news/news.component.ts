@@ -8,7 +8,6 @@ import {DataService} from '../../../../services/data.service';
 })
 export class NewsComponent implements OnInit {
   cars: string[] = [];
-
   constructor(private dataService: DataService) {}
 
   ngOnInit() {

@@ -1,16 +1,19 @@
-import {Injectable} from '@angular/core';
+import {Injectable, Output} from '@angular/core';
+import {LocalStorage} from '@ngx-pwa/local-storage';
+import {EventEmitter} from 'events';
 
-@Injectable(
-  {providedIn: 'root',
-  })
+@Injectable()
 export class DataService {
-  private data: string[] = ['Audi', 'Ford', 'Toyota'];
+  cars: string[] = ['Audi', 'BMW', 'Ford'];
+  result: boolean;
 
-  getData(): string[] {
-    return this.data;
+  getData() {
+    return this.cars;
   }
   addData(name: string) {
-    this.data.push(name);
+    this.cars.push(name);
   }
-
+  checkData({arr, val}: { arr: any, val: any }) {
+    return this.result = arr.some(arrVal => val === arrVal);
+  }
 }

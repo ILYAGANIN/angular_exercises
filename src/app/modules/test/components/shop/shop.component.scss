@@ -1,0 +1,6 @@
+.grid-container {
+  display: grid;
+  grid: 1fr 25% 30px / 40% 1fr;
+  grid-gap: 1em;
+  height: 200px;
+}

@@ -1,6 +1,6 @@
-<div>
-  <div><input [(ngModel)]="name" placeholder="Марка" />
-    <button (click)="addCar(name)">Добавить</button>
-  </div>
+<div class="grid-container">
+    <div><input class="form-control" [(ngModel)]="name" placeholder="Марка" />
+      <button class="btn btn-primary" (click)="checkCars(cars, name)">Добавить</button>
+    </div>
 </div>
-<!--<p>shop works!</p>-->
+
